@@ -1,0 +1,25 @@
+{
+  "name": "image-search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dandrust/image-search-api.git"
+  },
+  "author": "Dan Drust",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dandrust/image-search-api/issues"
+  },
+  "homepage": "https://github.com/dandrust/image-search-api#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongodb": "^2.2.5",
+    "request": "^2.74.0"
+  }
+}

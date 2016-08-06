@@ -1,0 +1,33 @@
+USER STORIES:
+I can get the image URLs, alt text and page urls for a set of images relating to a given search string
+I can paginate through the responses by adding a ?offset=2 parameter to the URL.
+I can get a list of the most recently submitted search strings
+
+Bing app key: XDeOS1iGC7KJU1ubg37VhRoWs7rGGukrbBvsQ7K/MEw=
+https://api.datamarket.azure.com/Bing/Search/v1/Image?Query=%27xbox%27&$format=JSON
+
+mlab database info:
+collection: 'img-search-api'
+uname: test
+password: test
+access link: mongodb://test:test@ds139665.mlab.com:39665/dandrust-url
+
+endpoints:
+search/:searchterm [?offset=#]
+    returns: JSON with search results
+search/history/
+    returns: JSON with search history 
+    
+PSEUDOCODE: /search/:searchterm
+get search term
+parse url
+log search term in database (add timestamp)
+make call to bing image search API
+parse results -> create response JSON
+push JSON response
+
+PSEUDOCODE: /search/history
+pull x documents from database collection
+parse results -> create response JSON
+push JSON response
+

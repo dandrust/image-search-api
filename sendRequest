@@ -1,0 +1,10 @@
+var request = require('request');
+
+module.exports = function(url, callback){
+   request(url, function(err, res, body){
+    if (err) throw err;
+    callback(null, body);
+    }).auth('','XDeOS1iGC7KJU1ubg37VhRoWs7rGGukrbBvsQ7K/MEw=');
+ 
+};
+
